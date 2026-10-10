@@ -1,0 +1,5 @@
+bin/
+obj/
+.vs/
+*.user
+smoke-test.txt

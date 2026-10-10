@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <AssemblyName>MDPaste</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <Deterministic>true</Deterministic>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.37.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.71" />
+    <Compile Remove="Tests\**\*.cs" />
+  </ItemGroup>
+  <Target Name="EmbedDependencies" AfterTargets="ResolveReferences" BeforeTargets="PrepareResources">
+    <ItemGroup>
+      <EmbeddedResource Include="@(ReferenceCopyLocalPaths)" Condition="'%(Extension)' == '.dll'">
+        <LogicalName>Dependencies.%(Filename)%(Extension)</LogicalName>
+      </EmbeddedResource>
+    </ItemGroup>
+  </Target>
+</Project>
