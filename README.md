@@ -6,6 +6,19 @@ Download the installer (`MDPaste-Setup-<version>.exe`) or the portable ZIP from
 the repository's [Releases page](https://github.com/Neter56/MDPaste/releases).
 The portable executable and ZIP are also included in `dist`.
 
+## What is MDPaste?
+
+MDPaste is a small Windows tray utility that turns Markdown on your clipboard
+into formatted rich text. Apps such as Word, Outlook, and Teams don't understand
+Markdown when you paste it, so you get raw symbols like `**bold**` and `# Heading`.
+With MDPaste running, copy the Markdown, press **Ctrl+Shift+V**, and the formatted
+result (headings, bold/italic, lists, tables, code blocks, links, and more) is
+pasted into the focused app instead.
+
+It converts locally and offline, with no browser engine, telemetry, background
+service, or administrator rights. Your original Markdown stays on the clipboard
+as plain text, so text-only fields still receive it unchanged.
+
 ## Install
 
 Run `MDPaste-Setup-<version>.exe`. It installs per user (no administrator
@@ -13,10 +26,6 @@ rights) to `%LOCALAPPDATA%\Programs\MDPaste`, adds **MDPaste** to the Start menu
 and optionally starts MDPaste at sign-in or adds a desktop shortcut. Uninstall it
 from **Settings > Apps**. Build the installer with `build.ps1` (requires
 [Inno Setup 6](https://jrsoftware.org/isinfo.php)).
-
-A small Windows tray utility. Copy Markdown, then press **Ctrl+Shift+V** to
-paste formatted content into the focused app. No browser engine, telemetry,
-background service, or administrator rights.
 
 ## Run
 
