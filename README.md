@@ -2,8 +2,17 @@
 
 Source repository: https://github.com/Neter56/MDPaste
 
-Portable executable and ZIP are included in `dist`. You can also download the
-ZIP from the repository's Releases page when available.
+Download the installer (`MDPaste-Setup-<version>.exe`) or the portable ZIP from
+the repository's [Releases page](https://github.com/Neter56/MDPaste/releases).
+The portable executable and ZIP are also included in `dist`.
+
+## Install
+
+Run `MDPaste-Setup-<version>.exe`. It installs per user (no administrator
+rights) to `%LOCALAPPDATA%\Programs\MDPaste`, adds **MDPaste** to the Start menu,
+and optionally starts MDPaste at sign-in or adds a desktop shortcut. Uninstall it
+from **Settings > Apps**. Build the installer with `build.ps1` (requires
+[Inno Setup 6](https://jrsoftware.org/isinfo.php)).
 
 A small Windows tray utility. Copy Markdown, then press **Ctrl+Shift+V** to
 paste formatted content into the focused app. No browser engine, telemetry,

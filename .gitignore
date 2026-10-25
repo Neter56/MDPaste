@@ -3,3 +3,4 @@ obj/
 .vs/
 *.user
 smoke-test.txt
+dist/MDPaste-Setup-*.exe
